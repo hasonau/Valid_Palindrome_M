@@ -1,0 +1,3 @@
+D:/CLION_PROJECTS_GITHUB/Valid Palindrome_M/cmake-build-debug/CMakeFiles/Valid_Palindrome_M.dir
+D:/CLION_PROJECTS_GITHUB/Valid Palindrome_M/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/CLION_PROJECTS_GITHUB/Valid Palindrome_M/cmake-build-debug/CMakeFiles/rebuild_cache.dir
