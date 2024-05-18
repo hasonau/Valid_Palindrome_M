@@ -4,36 +4,29 @@ using namespace std;
 class Solution {
 public:
     bool isPalindrome(string s) {
-        string s1;
-        for(int i=0;i<s.size();i++){
-            if(s[i]>=65 && s[i]<= 90){
-                char lower=tolower(s[i]);
-                s1=s1+lower;
-            }
-            else if(s[i]>=97 && s[i]<=122){
-                s1=s1+s[i];
-            }
-                else if(s[i]>=48 && s[i]<=57){
-                    s1=s1+s[i];
+        bool isPalindrome(string s) {
+            int left = 0;
+            int right = s.size() - 1;
+
+            while (left < right) {
+                // Move left index to the right while skipping non-alphanumeric characters
+                while (left < right && !isalnum(s[left])) {
+                    left++;
                 }
-                else{
-                    continue;
+                // Move right index to the left while skipping non-alphanumeric characters
+                while (left < right && !isalnum(s[right])) {
+                    right--;
                 }
-        }
-        cout<<s1<<endl;
-        int l=0;
-        int r=s1.size()-1;
-        while(l<r){
-            if(s1[l]==s1[r]){
-                l++;
-                r--;
+                // Compare characters
+                if (tolower(s[left]) != tolower(s[right])) {
+                    return false;
+                }
+                left++;
+                right--;
             }
-            else{
-                return false;
-            }
+            return true;
         }
-        return true;
-    }
+    };
 };
 
 int main(){
